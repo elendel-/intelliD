@@ -47,7 +47,7 @@ public class DColorSettingsPage implements ColorSettingsPage {
     @Override
     public String getDemoText() {
         // Example from dlang.org
-        String code = "" +
+        return        "" +
                       "/*\n" +
                       " * Computes average line length for standard input.\n" +
                       " */\n" +
@@ -64,8 +64,6 @@ public class DColorSettingsPage implements ColorSettingsPage {
                       "        lines ? sumLength / lines : 0);\n" +
                       " }\n" +
                       "";
-
-        return code;
     }
 
     @Nullable
