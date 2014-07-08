@@ -124,7 +124,7 @@ public class LexerTest {
 
         Lexer lexer = new Lexer(new BaseTokenFactory(), new StringReader(code));
 
-        List<Token> tokens = new ArrayList<Token>();
+        List<Token> tokens = new ArrayList<>();
         Token tok;
         do {
             tok = lexer.next();
