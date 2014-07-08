@@ -41,14 +41,7 @@ public class LexHexLiteralTest {
     public void spaces() throws Exception {
         String str = "x\"00 FbcD  3 2FD 0A  \"";
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(Character.toChars(0x00));
-        sb.append(Character.toChars(0xfb));
-        sb.append(Character.toChars(0xcd));
-        sb.append(Character.toChars(0x32));
-        sb.append(Character.toChars(0xfd));
-        sb.append(Character.toChars(0x0a));
-        String expected = sb.toString();
+        String expected = String.valueOf(Character.toChars(0x00)) + Character.toChars(0xfb) + Character.toChars(0xcd) + Character.toChars(0x32) + Character.toChars(0xfd) + Character.toChars(0x0a);
 
         LexerStream ls = new LexerStream(new StringReader(str));
         LexHexLiteral lex = new LexHexLiteral(new BaseTokenFactory(), ls);
