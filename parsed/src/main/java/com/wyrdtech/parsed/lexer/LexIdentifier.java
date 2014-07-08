@@ -66,12 +66,6 @@ public class LexIdentifier {
     }
 
     private static boolean valid_ident_char(int c) {
-        if (c == -1) {
-            return false;
-        }
-        if (c == '_') {
-            return true;
-        }
-        return Character.isLetterOrDigit(c);
+        return c == '_' || Character.isLetterOrDigit(c) && c != -1;
     }
 }
