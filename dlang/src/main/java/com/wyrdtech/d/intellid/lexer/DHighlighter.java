@@ -92,7 +92,7 @@ public class DHighlighter extends SyntaxHighlighterBase {
 
     private static final Map<TokenSet, TextAttributesKey[]> keys;
     static {
-        keys = new HashMap<TokenSet, TextAttributesKey[]>();
+        keys = new HashMap<>();
 
 /*
         keys.put(DTokenType.LINE_COMMENT, LINE_COMMENT);
