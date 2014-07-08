@@ -167,26 +167,16 @@ public class LexDelimitedString {
 
 
     private static boolean is_nesting_open(int c) {
-        if (c == -1) {
-            return false;
-        }
-        return c == '[' || c == '(' || c == '<' || c == '{';
+        return c != -1 && (c == '[' || c == '(' || c == '<' || c == '{');
     }
 
     private static int valid_close(int open) {
-        if (open == '[') {
-            return ']';
-        }
-        if (open == '(') {
-            return ')';
-        }
-        if (open == '<') {
-            return '>';
-        }
-        if (open == '{') {
-            return '}';
+        switch (open) {
+            case '[': return ']';
+            case '(': return ')';
+            case '<': return '>';
+            case '{': return '}';
         }
         return open;
     }
-
 }
