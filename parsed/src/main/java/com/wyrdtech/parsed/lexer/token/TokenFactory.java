@@ -42,13 +42,10 @@ public interface TokenFactory {
      * @param value Typed value of the token.  For string literals, String
      *              representing contents; for numeric literals, numeric value.
      */
-    public Token create(TokenType type,
-                        int index,
+    public Token create(int index,
                         int line,
                         int col,
-                        int length,
-                        Object value);
-
+                        int length);
     /**
      * Create multi-character token with a corresponding literal value and
      * explicit end location, allowing for tokens that span multiple lines.
