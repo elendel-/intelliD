@@ -249,7 +249,7 @@ public abstract class DTokenType implements com.intellij.psi.TokenType {
             return null;
         }
         if (tokens == null) {
-            tokens = new HashMap<TokenType, DElementType>();
+            tokens = new HashMap<>();
         }
 
         // Check the cache map for a matching token
