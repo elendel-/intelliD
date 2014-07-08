@@ -262,7 +262,7 @@ public class LexNumericLiteral {
 
 
         // Create token
-        Token token = factory.create(TokenType.Literal,
+        return factory.create(TokenType.Literal,
                                      start_index,
                                      start_line,
                                      start_col,
@@ -270,9 +270,6 @@ public class LexNumericLiteral {
                                      in_stream.getLine(),
                                      in_stream.getCol(),
                                      value);
-
-        return token;
-
     }
 
 
